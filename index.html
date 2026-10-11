@@ -4,118 +4,299 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Odysse · Pêche en mer</title>
-  <meta name="description" content="Odysse, le carnet de pêche en mer intelligent : photographie ta prise, l'IA reconnaît l'espèce, ta collection grandit. Spots privés, pêche entre amis." />
+  <meta name="description" content="Odysse, le carnet de pêche en mer qui reconnaît tes poissons : photo, identification par IA, collection de 150+ espèces, marées et conditions, pêche entre amis. Spots privés." />
+  <meta property="og:title" content="Odysse · Pêche en mer" />
+  <meta property="og:description" content="Le carnet de pêche qui reconnaît tes poissons." />
+  <meta property="og:image" content="https://odysse.app/img/story.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;600&family=Newsreader:wght@600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;600&family=Newsreader:ital,wght@0,600;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
-  <header class="hero">
+  <nav>
     <div class="wrap">
-      <div class="kicker">Odysse</div>
-      <h1>Pêche en mer</h1>
-      <p class="lead">Le carnet de pêche qui reconnaît tes poissons. Photographie ta prise, l'IA identifie l'espèce, et ta collection grandit sortie après sortie.</p>
-      <a class="cta" href="mailto:contact@odysse.app?subject=B%C3%AAta%20Odysse">Rejoindre la bêta</a>
-      <span class="cta-note">iPhone d'abord, Android ensuite. Manche, Atlantique, Méditerranée.</span>
+      <a class="logo" href="#"><b>Odysse</b><span>Pêche en mer</span></a>
+      <div class="links">
+        <a href="#app">L'app</a>
+        <a href="#parcours">Comment ça marche</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#transparence">Transparence</a>
+      </div>
+      <a class="btn btn-light" href="mailto:contact@odysse.app?subject=B%C3%AAta%20Odysse">Rejoindre la bêta</a>
     </div>
+  </nav>
+
+  <header class="hero">
+    <svg class="lines" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.2" aria-hidden="true">
+        <path d="M0 20.0 L16 23.9 L32 27.5 L48 30.6 L64 33.0 L80 34.6 L96 35.4 L112 35.4 L128 34.7 L144 33.5 L160 32.0 L176 30.5 L192 29.1 L208 28.1 L224 27.4 L240 27.2 L256 27.4 L272 27.9 L288 28.5 L304 29.1 L320 29.4 L336 29.3 L352 28.5 L368 27.0 L384 24.9 L400 22.1 L416 18.8 L432 15.2 L448 11.5 L464 8.1 L480 5.2 L496 2.9 L512 1.4 L528 0.8 L544 1.2 L560 2.4 L576 4.2 L592 6.5 L608 9.0 L624 11.5 L640 13.8 L656 15.7 L672 17.1 L688 17.9 L704 18.3 L720 18.4 L736 18.2 L752 18.0 L768 18.1 L784 18.5 L800 19.4 L816 20.9 L832 23.0 L848 25.5 L864 28.4 L880 31.4 L896 34.2 L912 36.7 L928 38.6 L944 39.7 L960 39.9 L976 39.1 L992 37.5 L1008 35.1 L1024 32.1 L1040 28.8 L1056 25.4 L1072 22.2 L1088 19.4 L1104 17.1 L1120 15.5 L1136 14.5 L1152 14.1 L1168 14.1 L1184 14.4 L1200 14.7 L1216 14.9 L1232 14.8 L1248 14.3 L1264 13.4 L1280 11.9 L1296 10.1 L1312 8.1 L1328 6.1 L1344 4.4 L1360 3.1 L1376 2.5 L1392 2.6 L1408 3.7 L1424 5.6 L1440 8.3"/>
+        <path d="M0 88.0 L16 89.6 L32 90.5 L48 90.5 L64 89.7 L80 88.5 L96 86.9 L112 85.2 L128 83.6 L144 82.3 L160 81.4 L176 80.9 L192 80.9 L208 81.2 L224 81.7 L240 82.2 L256 82.5 L272 82.4 L288 81.7 L304 80.4 L320 78.3 L336 75.7 L352 72.5 L368 69.0 L384 65.4 L400 62.1 L416 59.1 L432 56.8 L448 55.4 L464 54.8 L480 55.2 L496 56.4 L512 58.3 L528 60.7 L544 63.3 L560 66.0 L576 68.5 L592 70.6 L608 72.2 L624 73.2 L640 73.8 L656 73.9 L672 73.8 L688 73.6 L704 73.6 L720 73.9 L736 74.7 L752 76.0 L768 77.9 L784 80.2 L800 82.9 L816 85.7 L832 88.5 L848 90.9 L864 92.7 L880 93.8 L896 94.0 L912 93.2 L928 91.6 L944 89.2 L960 86.1 L976 82.8 L992 79.3 L1008 75.9 L1024 73.0 L1040 70.5 L1056 68.8 L1072 67.6 L1088 67.1 L1104 67.1 L1120 67.5 L1136 67.9 L1152 68.3 L1168 68.4 L1184 68.1 L1200 67.3 L1216 66.1 L1232 64.5 L1248 62.7 L1264 60.9 L1280 59.3 L1296 58.0 L1312 57.4 L1328 57.6 L1344 58.6 L1360 60.5 L1376 63.1 L1392 66.4 L1408 70.1 L1424 74.0 L1440 77.8"/>
+        <path d="M0 144.7 L16 143.4 L32 141.7 L48 139.8 L64 138.0 L80 136.5 L96 135.3 L112 134.6 L128 134.4 L144 134.5 L160 134.9 L176 135.3 L192 135.6 L208 135.5 L224 134.9 L240 133.7 L256 131.8 L272 129.3 L288 126.2 L304 122.9 L320 119.4 L336 116.1 L352 113.2 L368 110.9 L384 109.4 L400 108.8 L416 109.2 L432 110.4 L448 112.4 L464 114.9 L480 117.7 L496 120.5 L512 123.2 L528 125.5 L544 127.3 L560 128.5 L576 129.2 L592 129.4 L608 129.4 L624 129.2 L640 129.1 L656 129.3 L672 129.9 L688 131.1 L704 132.7 L720 134.9 L736 137.4 L752 140.1 L768 142.7 L784 145.0 L800 146.8 L816 147.8 L832 148.0 L848 147.2 L864 145.6 L880 143.2 L896 140.1 L912 136.7 L928 133.1 L944 129.6 L960 126.5 L976 124.0 L992 122.0 L1008 120.8 L1024 120.2 L1040 120.2 L1056 120.6 L1072 121.1 L1088 121.6 L1104 121.9 L1120 121.8 L1136 121.3 L1152 120.3 L1168 119.0 L1184 117.4 L1200 115.7 L1216 114.2 L1232 113.0 L1248 112.4 L1264 112.6 L1280 113.6 L1296 115.4 L1312 118.0 L1328 121.2 L1344 124.9 L1360 128.8 L1376 132.6 L1392 136.1 L1408 139.0 L1424 141.3 L1440 142.7"/>
+        <path d="M0 192.4 L16 190.6 L32 189.2 L48 188.3 L64 187.9 L80 187.8 L96 188.1 L112 188.4 L128 188.7 L144 188.6 L160 188.1 L176 187.0 L192 185.2 L208 182.9 L224 180.0 L240 176.7 L256 173.4 L272 170.1 L288 167.3 L304 165.0 L320 163.5 L336 163.0 L352 163.3 L368 164.6 L384 166.6 L400 169.1 L416 172.1 L432 175.0 L448 177.9 L464 180.4 L480 182.4 L496 183.8 L512 184.6 L528 185.0 L544 184.9 L560 184.8 L576 184.6 L592 184.7 L608 185.1 L624 186.1 L640 187.5 L656 189.5 L672 191.8 L688 194.3 L704 196.8 L720 199.0 L736 200.7 L752 201.7 L768 201.9 L784 201.2 L800 199.6 L816 197.1 L832 194.1 L848 190.6 L864 186.9 L880 183.3 L896 180.1 L912 177.4 L928 175.4 L944 174.0 L960 173.4 L976 173.3 L992 173.7 L1008 174.3 L1024 175.0 L1040 175.5 L1056 175.6 L1072 175.3 L1088 174.6 L1104 173.5 L1120 172.1 L1136 170.6 L1152 169.2 L1168 168.1 L1184 167.5 L1200 167.7 L1216 168.6 L1232 170.4 L1248 172.9 L1264 176.1 L1280 179.8 L1296 183.7 L1312 187.5 L1328 191.0 L1344 194.0 L1360 196.3 L1376 197.8 L1392 198.4 L1408 198.2 L1424 197.4 L1440 196.2"/>
+        <path d="M0 241.3 L16 241.1 L32 241.2 L48 241.5 L64 241.7 L80 241.7 L96 241.2 L112 240.3 L128 238.7 L144 236.5 L160 233.7 L176 230.6 L192 227.4 L208 224.2 L224 221.4 L240 219.2 L256 217.7 L272 217.2 L288 217.5 L304 218.8 L320 220.8 L336 223.5 L352 226.5 L368 229.6 L384 232.6 L400 235.3 L416 237.5 L432 239.0 L448 240.0 L464 240.5 L480 240.5 L496 240.3 L512 240.1 L528 240.1 L544 240.4 L560 241.1 L576 242.3 L592 244.1 L608 246.2 L624 248.5 L640 250.8 L656 253.0 L672 254.6 L688 255.6 L704 255.8 L720 255.1 L736 253.5 L752 251.0 L768 247.9 L784 244.4 L800 240.7 L816 237.0 L832 233.7 L848 230.9 L864 228.7 L880 227.3 L896 226.6 L912 226.5 L928 226.9 L944 227.6 L960 228.4 L976 229.1 L992 229.4 L1008 229.4 L1024 228.9 L1040 228.0 L1056 226.9 L1072 225.5 L1088 224.2 L1104 223.2 L1120 222.7 L1136 222.8 L1152 223.7 L1168 225.4 L1184 227.9 L1200 231.0 L1216 234.7 L1232 238.5 L1248 242.4 L1264 245.9 L1280 249.0 L1296 251.3 L1312 252.8 L1328 253.5 L1344 253.3 L1360 252.5 L1376 251.1 L1392 249.5 L1408 247.8 L1424 246.2 L1440 244.9"/>
+        <path d="M0 294.7 L16 294.7 L32 294.4 L48 293.5 L64 292.1 L80 290.1 L96 287.5 L112 284.6 L128 281.4 L144 278.4 L160 275.7 L176 273.5 L192 272.0 L208 271.4 L224 271.8 L240 273.1 L256 275.2 L272 277.9 L288 281.0 L304 284.2 L320 287.4 L336 290.2 L352 292.6 L368 294.3 L384 295.4 L400 296.0 L416 296.1 L432 295.9 L448 295.6 L464 295.4 L480 295.6 L496 296.1 L512 297.1 L528 298.6 L544 300.5 L560 302.7 L576 304.8 L592 306.8 L608 308.4 L624 309.4 L640 309.6 L656 308.9 L672 307.3 L688 304.9 L704 301.8 L720 298.2 L736 294.4 L752 290.7 L768 287.3 L784 284.3 L800 282.1 L816 280.6 L832 279.8 L848 279.7 L864 280.1 L880 280.9 L896 281.8 L912 282.7 L928 283.3 L944 283.5 L960 283.3 L976 282.6 L992 281.7 L1008 280.5 L1024 279.3 L1040 278.4 L1056 277.9 L1072 278.0 L1088 278.8 L1104 280.5 L1120 282.9 L1136 286.0 L1152 289.5 L1168 293.4 L1184 297.2 L1200 300.8 L1216 303.9 L1232 306.2 L1248 307.8 L1264 308.5 L1280 308.3 L1296 307.4 L1312 306.0 L1328 304.2 L1344 302.3 L1360 300.5 L1376 299.0 L1392 298.0 L1408 297.3 L1424 297.2 L1440 297.3"/>
+        <path d="M0 345.5 L16 343.7 L32 341.3 L48 338.5 L64 335.6 L80 332.6 L96 330.0 L112 327.8 L128 326.4 L144 325.8 L160 326.2 L176 327.5 L192 329.6 L208 332.3 L224 335.5 L240 338.9 L256 342.2 L272 345.2 L288 347.7 L304 349.6 L320 350.8 L336 351.5 L352 351.6 L368 351.4 L384 351.1 L400 350.8 L416 350.7 L432 351.1 L448 351.9 L464 353.1 L480 354.8 L496 356.8 L512 358.8 L528 360.7 L544 362.2 L560 363.1 L576 363.3 L592 362.6 L608 361.0 L624 358.7 L640 355.6 L656 352.0 L672 348.2 L688 344.4 L704 340.9 L720 337.9 L736 335.5 L752 333.9 L768 333.1 L784 333.0 L800 333.4 L816 334.3 L832 335.3 L848 336.4 L864 337.2 L880 337.6 L896 337.7 L912 337.3 L928 336.5 L944 335.5 L960 334.5 L976 333.6 L992 333.2 L1008 333.2 L1024 334.0 L1040 335.6 L1056 337.9 L1072 340.9 L1088 344.4 L1104 348.2 L1120 352.0 L1136 355.6 L1152 358.7 L1168 361.1 L1184 362.7 L1200 363.4 L1216 363.2 L1232 362.3 L1248 360.8 L1264 358.9 L1280 356.8 L1296 354.9 L1312 353.1 L1328 351.8 L1344 351.0 L1360 350.6 L1376 350.6 L1392 350.9 L1408 351.2 L1424 351.4 L1440 351.3"/>
+        <path d="M0 389.7 L16 386.9 L32 384.3 L48 382.2 L64 380.8 L80 380.3 L96 380.6 L112 381.9 L128 384.0 L144 386.8 L160 390.1 L176 393.6 L192 397.0 L208 400.1 L224 402.8 L240 404.8 L256 406.2 L272 406.9 L288 407.1 L304 406.9 L320 406.5 L336 406.1 L352 405.9 L368 406.0 L384 406.6 L400 407.6 L416 409.1 L432 410.8 L448 412.7 L464 414.4 L480 415.9 L496 416.7 L512 416.9 L528 416.3 L544 414.7 L560 412.4 L576 409.3 L592 405.8 L608 401.9 L624 398.1 L640 394.5 L656 391.4 L672 388.9 L688 387.3 L704 386.4 L720 386.3 L736 386.8 L752 387.7 L768 388.9 L784 390.1 L800 391.1 L816 391.8 L832 392.1 L848 391.9 L864 391.4 L880 390.6 L896 389.7 L912 388.9 L928 388.5 L944 388.6 L960 389.3 L976 390.8 L992 393.0 L1008 395.9 L1024 399.3 L1040 403.0 L1056 406.8 L1072 410.4 L1088 413.5 L1104 415.9 L1120 417.5 L1136 418.2 L1152 418.1 L1168 417.1 L1184 415.5 L1200 413.5 L1216 411.3 L1232 409.1 L1248 407.2 L1264 405.6 L1280 404.6 L1296 404.0 L1312 403.8 L1328 404.0 L1344 404.2 L1360 404.4 L1376 404.3 L1392 403.8 L1408 402.7 L1424 401.0 L1440 398.7"/>
+        <path d="M0 435.4 L16 434.8 L32 435.2 L48 436.5 L64 438.6 L80 441.4 L96 444.7 L112 448.3 L128 451.8 L144 455.1 L160 457.9 L176 460.1 L192 461.6 L208 462.4 L224 462.6 L240 462.4 L256 461.9 L272 461.4 L288 461.0 L304 460.9 L320 461.3 L336 462.1 L352 463.3 L368 464.8 L384 466.5 L400 468.1 L416 469.5 L432 470.3 L448 470.5 L464 469.8 L480 468.4 L496 466.1 L512 463.0 L528 459.5 L544 455.7 L560 451.8 L576 448.1 L592 445.0 L608 442.5 L624 440.7 L640 439.8 L656 439.6 L672 440.2 L688 441.2 L704 442.5 L720 443.9 L736 445.1 L752 446.0 L768 446.6 L784 446.7 L800 446.3 L816 445.7 L832 445.0 L848 444.3 L864 443.9 L880 443.9 L896 444.6 L912 446.0 L928 448.1 L944 450.9 L960 454.2 L976 457.8 L992 461.5 L1008 465.1 L1024 468.2 L1040 470.6 L1056 472.3 L1072 473.0 L1088 472.9 L1104 471.9 L1120 470.2 L1136 468.1 L1152 465.7 L1168 463.4 L1184 461.2 L1200 459.4 L1216 458.1 L1232 457.4 L1248 457.0 L1264 457.0 L1280 457.2 L1296 457.4 L1312 457.4 L1328 457.0 L1344 456.0 L1360 454.5 L1376 452.4 L1392 449.8 L1408 446.8 L1424 443.7 L1440 440.7"/>
+        <path d="M0 493.2 L16 496.0 L32 499.4 L48 503.0 L64 506.6 L80 510.0 L96 512.9 L112 515.3 L128 516.9 L144 517.8 L160 518.1 L176 517.8 L192 517.3 L208 516.7 L224 516.1 L240 515.8 L256 515.9 L272 516.5 L288 517.4 L304 518.7 L320 520.2 L336 521.7 L352 523.0 L368 523.8 L384 524.0 L400 523.4 L416 521.9 L432 519.7 L448 516.7 L464 513.2 L480 509.4 L496 505.5 L512 501.8 L528 498.6 L544 496.0 L560 494.2 L576 493.2 L592 493.1 L608 493.6 L624 494.7 L640 496.1 L656 497.7 L672 499.1 L688 500.3 L704 501.1 L720 501.4 L736 501.3 L752 500.9 L768 500.3 L784 499.7 L800 499.3 L816 499.3 L832 499.9 L848 501.2 L864 503.2 L880 505.9 L896 509.1 L912 512.6 L928 516.3 L944 519.8 L960 522.8 L976 525.3 L992 527.0 L1008 527.7 L1024 527.5 L1040 526.5 L1056 524.8 L1072 522.6 L1088 520.1 L1104 517.6 L1120 515.2 L1136 513.2 L1152 511.7 L1168 510.7 L1184 510.2 L1200 510.1 L1216 510.2 L1232 510.4 L1248 510.4 L1264 510.1 L1280 509.3 L1296 508.0 L1312 506.0 L1328 503.6 L1344 500.8 L1360 497.8 L1376 494.9 L1392 492.4 L1408 490.3 L1424 489.1 L1440 488.7"/>
+        <path d="M0 561.5 L16 565.0 L32 568.0 L48 570.4 L64 572.2 L80 573.2 L96 573.5 L112 573.2 L128 572.6 L144 571.9 L160 571.2 L176 570.7 L192 570.5 L208 570.8 L224 571.6 L240 572.6 L256 574.0 L272 575.3 L288 576.5 L304 577.2 L320 577.4 L336 576.8 L352 575.4 L368 573.3 L384 570.4 L400 566.9 L416 563.1 L432 559.2 L448 555.5 L464 552.2 L480 549.6 L496 547.7 L512 546.7 L528 546.6 L544 547.1 L560 548.3 L576 549.9 L592 551.6 L608 553.2 L624 554.6 L640 555.6 L656 556.2 L672 556.3 L688 556.1 L704 555.6 L720 555.1 L736 554.7 L752 554.7 L768 555.3 L784 556.5 L800 558.4 L816 560.9 L832 564.0 L848 567.4 L864 570.9 L880 574.4 L896 577.4 L912 579.9 L928 581.6 L944 582.3 L960 582.2 L976 581.1 L992 579.4 L1008 577.0 L1024 574.4 L1040 571.7 L1056 569.2 L1072 567.0 L1088 565.2 L1104 564.1 L1120 563.4 L1136 563.2 L1152 563.2 L1168 563.4 L1184 563.5 L1200 563.3 L1216 562.6 L1232 561.4 L1248 559.7 L1264 557.4 L1280 554.8 L1296 552.0 L1312 549.2 L1328 546.8 L1344 544.8 L1360 543.5 L1376 543.2 L1392 543.7 L1408 545.2 L1424 547.4 L1440 550.3"/>
+        <path d="M0 627.4 L16 628.5 L32 628.8 L48 628.6 L64 627.9 L80 627.1 L96 626.2 L112 625.5 L128 625.1 L144 625.1 L160 625.6 L176 626.5 L192 627.6 L208 628.8 L224 629.9 L240 630.6 L256 630.8 L272 630.2 L288 628.9 L304 626.8 L320 624.0 L336 620.6 L352 616.8 L368 613.0 L384 609.2 L400 605.9 L416 603.3 L432 601.4 L448 600.3 L464 600.1 L480 600.7 L496 602.0 L512 603.6 L528 605.5 L544 607.3 L560 609.0 L576 610.2 L592 611.0 L608 611.3 L624 611.3 L640 611.0 L656 610.5 L672 610.2 L688 610.2 L704 610.7 L720 611.8 L736 613.5 L752 615.9 L768 618.8 L784 622.1 L800 625.6 L816 629.0 L832 632.0 L848 634.4 L864 636.1 L880 636.8 L896 636.7 L912 635.6 L928 633.8 L944 631.4 L960 628.7 L976 625.8 L992 623.1 L1008 620.7 L1024 618.8 L1040 617.4 L1056 616.6 L1072 616.2 L1088 616.2 L1104 616.4 L1120 616.5 L1136 616.4 L1152 615.9 L1168 614.9 L1184 613.4 L1200 611.3 L1216 608.9 L1232 606.2 L1248 603.6 L1264 601.2 L1280 599.3 L1296 598.1 L1312 597.7 L1328 598.2 L1344 599.7 L1360 602.0 L1376 604.9 L1392 608.3 L1408 611.9 L1424 615.4 L1440 618.6"/>
+        <path d="M0 683.2 L16 682.2 L32 681.1 L48 680.2 L64 679.6 L80 679.4 L96 679.7 L112 680.3 L128 681.2 L144 682.3 L160 683.2 L176 683.9 L192 684.1 L208 683.6 L224 682.3 L240 680.3 L256 677.6 L272 674.2 L288 670.6 L304 666.7 L320 663.0 L336 659.7 L352 657.0 L368 655.0 L384 654.0 L400 653.8 L416 654.4 L432 655.7 L448 657.5 L464 659.5 L480 661.5 L496 663.3 L512 664.8 L528 665.9 L544 666.4 L560 666.5 L576 666.4 L592 666.0 L608 665.7 L624 665.7 L640 666.1 L656 667.1 L672 668.7 L688 670.9 L704 673.7 L720 676.9 L736 680.2 L752 683.5 L768 686.5 L784 688.9 L800 690.5 L816 691.3 L832 691.1 L848 690.1 L864 688.2 L880 685.7 L896 682.9 L912 679.9 L928 677.0 L944 674.4 L960 672.3 L976 670.7 L992 669.7 L1008 669.3 L1024 669.2 L1040 669.4 L1056 669.6 L1072 669.6 L1088 669.2 L1104 668.4 L1120 667.1 L1136 665.2 L1152 663.0 L1168 660.5 L1184 658.0 L1200 655.7 L1216 653.9 L1232 652.7 L1248 652.3 L1264 652.9 L1280 654.3 L1296 656.6 L1312 659.5 L1328 663.0 L1344 666.6 L1360 670.2 L1376 673.6 L1392 676.4 L1408 678.6 L1424 680.1 L1440 680.9"/>
+        <path d="M0 734.1 L16 733.7 L32 733.7 L48 734.1 L64 734.8 L80 735.7 L96 736.6 L112 737.2 L128 737.3 L144 736.9 L160 735.7 L176 733.8 L192 731.1 L208 727.9 L224 724.3 L240 720.5 L256 716.8 L272 713.5 L288 710.8 L304 708.8 L320 707.7 L336 707.5 L352 708.1 L368 709.5 L384 711.3 L400 713.5 L416 715.7 L432 717.8 L448 719.5 L464 720.7 L480 721.5 L496 721.8 L512 721.8 L528 721.5 L544 721.3 L560 721.2 L576 721.6 L592 722.4 L608 723.9 L624 725.9 L640 728.5 L656 731.6 L672 734.8 L688 738.0 L704 740.9 L720 743.2 L736 744.9 L752 745.7 L768 745.5 L784 744.4 L800 742.5 L816 740.0 L832 737.0 L848 733.9 L864 730.8 L880 728.1 L896 725.8 L912 724.1 L928 722.9 L944 722.4 L960 722.2 L976 722.4 L992 722.6 L1008 722.7 L1024 722.5 L1040 721.9 L1056 720.8 L1072 719.2 L1088 717.2 L1104 714.9 L1120 712.5 L1136 710.4 L1152 708.6 L1168 707.4 L1184 707.1 L1200 707.6 L1216 709.0 L1232 711.3 L1248 714.2 L1264 717.7 L1280 721.4 L1296 725.1 L1312 728.5 L1328 731.5 L1344 733.8 L1360 735.4 L1376 736.3 L1392 736.5 L1408 736.1 L1424 735.5 L1440 734.7"/>
+    </svg>
+    <div class="wrap">
+      <div>
+        <div class="kicker">Carnet de pêche en mer</div>
+        <h1>Chaque prise<br />a son <em>histoire</em>.</h1>
+        <p class="lead">Photographie ta prise : Odysse reconnaît l'espèce, note la marée, la lune et la météo, et ajoute la carte du poisson à ta collection. Tes coins restent secrets.</p>
+        <div class="ctas">
+          <a class="btn btn-light" href="mailto:contact@odysse.app?subject=B%C3%AAta%20Odysse">Rejoindre la bêta</a>
+          <a class="btn btn-ghost" href="#app">Découvrir l'app</a>
+        </div>
+        <p class="note">iPhone d'abord, Android ensuite · Manche, Atlantique, Méditerranée</p>
+      </div>
+      <div class="phones">
+        <div class="phone p1"><img src="img/home.jpg" alt="Accueil d'Odysse : conditions du jour, marée et prises" /></div>
+        <div class="phone p2"><img src="img/collection.jpg" alt="Collection d'espèces d'Odysse" /></div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 240 90, 480 0, 720 30 C 960 60, 1200 10, 1440 45 L1440 90 L0 90 Z" fill="#F4F7FA"/></svg>
   </header>
 
-  <main class="wrap">
-    <h2 class="section-title">Le projet</h2>
-    <p class="section-lead">Un carnet de pêche sérieux et ludique, pensé par des pêcheurs pour des pêcheurs.</p>
-    <div class="card">
-      <p>Odysse est né d'une idée simple : garder une trace de chaque prise, sans paperasse, et en apprendre un peu plus à chaque sortie. Chaque poisson pêché débloque sa carte d'espèce, avec ses signes distinctifs, sa saison, sa réglementation et son encyclopédie. Le tout en respectant une règle d'or des pêcheurs : <strong>tes coins restent secrets</strong>.</p>
+  <div class="wrap">
+    <div class="facts">
+      <div class="fact"><b>156</b><span>espèces à collectionner</span></div>
+      <div class="fact"><b>3</b><span>façades : Manche, Atlantique, Méditerranée</span></div>
+      <div class="fact"><b>0</b><span>publicité, 0 donnée revendue</span></div>
+      <div class="fact"><b>100 %</b><span>utilisable hors ligne en mer</span></div>
     </div>
+  </div>
 
-    <h2 class="section-title">Comment ça marche</h2>
-    <p class="section-lead">Trois gestes, sur le bateau ou les pieds dans l'eau.</p>
-    <div class="grid">
-      <div class="card"><div class="step">01</div><h3>Photographie ta prise</h3><p>Dans l'app, au moment de la prise. Date, heure et position sont enregistrées automatiquement.</p></div>
-      <div class="card"><div class="step">02</div><h3>L'IA reconnaît l'espèce</h3><p>Jusqu'à 3 propositions avec les signes à vérifier sur le poisson. Elle peut aussi estimer sa taille.</p></div>
-      <div class="card"><div class="step">03</div><h3>Ta collection grandit</h3><p>La carte de l'espèce se débloque, avec la marée, le coefficient, la lune et la météo du moment.</p></div>
-    </div>
+  <section class="block" id="app">
+    <div class="wrap">
+      <div class="eyebrow">L'app</div>
+      <h2>Pensée pour le bord de l'eau.</h2>
+      <p class="sub">Des boutons larges pour les mains mouillées, une saisie en quelques secondes, et tout ce qu'il faut savoir sur le poisson que tu tiens.</p>
 
-    <h2 class="section-title">Ce que tu y trouves</h2>
-    <div class="grid">
-      <div class="card"><h3>150+ espèces</h3><p>Poissons, céphalopodes, crustacés et coquillages, avec photo, schéma annoté et encyclopédie.</p></div>
-      <div class="card"><h3>Réglementation</h3><p>Alerte si le poisson est sous la taille légale, espèces protégées signalées.</p></div>
-      <div class="card"><h3>Ça mord ?</h3><p>Une note du jour selon la marée, la lune, la pression et tes propres habitudes.</p></div>
-      <div class="card"><h3>Entre amis</h3><p>Groupes privés, fil des prises, réactions et classements. Ta position reste privée.</p></div>
-      <div class="card"><h3>Hors ligne</h3><p>Pas de réseau en mer ? La prise s'enregistre et se synchronise au retour.</p></div>
-      <div class="card"><h3>Partage</h3><p>Une belle image de ta prise pour Instagram ou WhatsApp, jamais avec ton spot.</p></div>
-    </div>
-
-    <h2 class="section-title">Tarifs</h2>
-    <p class="section-lead">L'essentiel est gratuit. Le Premium est là pour ceux qui veulent aller plus loin.</p>
-    <div class="grid grid-2">
-      <div class="card plan">
-        <span class="badge">Gratuit</span>
-        <div class="price">0 €</div>
-        <ul>
-          <li>Prises illimitées</li>
-          <li>10 identifications IA par mois</li>
-          <li>Collection, encyclopédie, badges</li>
-          <li>Conditions du jour et « Ça mord ? »</li>
-          <li>Groupes d'amis et classements</li>
-          <li>Les 5 dernières prises consultables</li>
-        </ul>
+      <div class="feature">
+        <div class="visual">
+          <div class="blob"></div>
+          <div class="phone"><img src="img/catch.jpg" alt="Fiche d'une prise : bar commun de 62 cm" loading="lazy" /></div>
+        </div>
+        <div>
+          <div class="eyebrow">Reconnaissance</div>
+          <h3>L'IA reconnaît ton poisson.</h3>
+          <p>Prends la photo dans l'app : Odysse propose jusqu'à trois espèces avec leur indice de confiance, et te montre les signes à vérifier pour lever le doute.</p>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Date, heure et position enregistrées automatiquement</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Estimation de la taille à partir d'un objet connu sur la photo</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Alerte si le poisson est sous la taille légale</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Carnet complet : technique, leurre, appât, poste, relâché ou gardé</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="card plan featured">
-        <span class="badge">Premium · essai 7 jours</span>
-        <div class="price">3,99 € <small>/ mois</small></div>
-        <div class="muted">ou 39,90 € / an (2 mois offerts)</div>
-        <ul>
-          <li>Tout le gratuit, plus :</li>
-          <li>100 identifications IA par mois</li>
-          <li>Historique complet de tes prises</li>
-          <li>Carte des spots et statistiques par spot</li>
-          <li>Calendrier perso et alertes de saison</li>
-          <li>Statistiques détaillées, bilan de saison, export</li>
-        </ul>
+
+      <div class="feature flip">
+        <div class="visual">
+          <div class="blob"></div>
+          <div class="phone"><img src="img/species.jpg" alt="Fiche espèce du bar commun" loading="lazy" /></div>
+          <div class="card-shot" style="position:absolute;right:-2%;bottom:-24px;width:56%"><img src="img/identification.jpg" alt="Schéma d'identification annoté" loading="lazy" /></div>
+        </div>
+        <div>
+          <div class="eyebrow">Collection</div>
+          <h3>156 espèces à débloquer.</h3>
+          <p>Chaque espèce pêchée débloque sa carte, en couleur. Les autres attendent en noir et blanc. Rareté, records perso, badges et cartes légendaires : la collection grandit sortie après sortie.</p>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Schéma annoté et signes d'identification</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Confusions possibles, saison, réglementation par façade</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Encyclopédie en français et en anglais</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Poissons, céphalopodes, crustacés et coquillages</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="visual">
+          <div class="blob"></div>
+          <div class="phone"><img src="img/calendar.jpg" alt="Calendrier avec prévisions et note « Ça mord ? »" loading="lazy" /></div>
+        </div>
+        <div>
+          <div class="eyebrow">Conditions</div>
+          <h3>Ça mord, aujourd'hui ?</h3>
+          <p>Marée et coefficient, lune, vent, pression, température de l'eau et houle : tout est réuni, avec une note du jour qui apprend de tes propres prises.</p>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Prévisions sur 7 jours et espèces en saison</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Alertes au début de la saison de tes espèces</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Mode sortie : durée, prises et résumé à partager</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature flip">
+        <div class="visual">
+          <div class="blob"></div>
+          <div class="phone"><img src="img/map.jpg" alt="Carte privée des prises" loading="lazy" /></div>
+        </div>
+        <div>
+          <div class="eyebrow">Spots privés</div>
+          <h3>Tes coins restent à toi.</h3>
+          <p>Tes positions sont privées par défaut. Avec tes amis, tu choisis : rien, une zone floutée d'environ 2 km, ou le point exact. Aucune image partagée ne contient jamais ta position.</p>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Groupes d'amis privés, réactions et commentaires</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Classements entre amis</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Spots nommés et statistiques par spot</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="visual">
+          <div class="blob"></div>
+          <div class="phone"><img src="img/story.jpg" alt="Image de partage d'une prise au format story" loading="lazy" /></div>
+        </div>
+        <div>
+          <div class="eyebrow">Partage</div>
+          <h3>Une prise qui se montre.</h3>
+          <p>En un geste, une belle image de ta prise au format publication ou story, prête pour Instagram, Facebook, TikTok ou WhatsApp. La légende est copiée, ton spot reste secret.</p>
+          <ul>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Rareté, record perso et nouvelle espèce mis en avant</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Conditions du moment, sans position</span></li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
 
-    <h2 class="section-title">Où va ton abonnement</h2>
-    <p class="section-lead">Odysse n'affiche aucune publicité et ne vend aucune donnée. Les abonnements servent à faire tourner l'app.</p>
-    <div class="card">
-      <p>Chaque photo analysée par l'IA a un coût réel, tout comme l'hébergement de tes prises et de tes photos. Les revenus du Premium financent d'abord ces frais, pour que l'app reste rapide, fiable et gratuite pour l'essentiel.</p>
-      <div class="bar" aria-hidden="true">
-        <span style="width:15%;background:#0e2a47"></span>
-        <span style="width:30%;background:#1f6fb8"></span>
-        <span style="width:30%;background:#c98a1e"></span>
-        <span style="width:25%;background:#a9bed3"></span>
+  <section class="block" id="parcours">
+    <div class="wrap">
+      <div class="eyebrow">Comment ça marche</div>
+      <h2>Une prise en 30 secondes.</h2>
+      <p class="sub">Même avec un poisson qui gigote, l'essentiel se fait en quelques gestes. Le reste peut attendre le retour au port.</p>
+      <div class="flow">
+        <div class="step"><div class="num">1</div><h4>Photo</h4><p>Le bouton central ouvre l'appareil photo. Position et heure sont prises automatiquement.</p><div class="time">≈ 3 s</div></div>
+        <div class="step"><div class="num">2</div><h4>Identification</h4><p>L'IA propose l'espèce et les signes à vérifier. Tu confirmes d'un toucher.</p><div class="time">≈ 10 s</div></div>
+        <div class="step"><div class="num">3</div><h4>Carnet</h4><p>Pré-rempli avec ta prise précédente de la sortie : taille et poids suffisent.</p><div class="time">≈ 15 s</div></div>
+        <div class="step"><div class="num">4</div><h4>Collection</h4><p>La carte de l'espèce se débloque. Sans réseau, tout se synchronise plus tard.</p><div class="time">instantané</div></div>
       </div>
-      <div class="legend">
-        <div><i style="background:#0e2a47"></i>Commission de l'App Store (15 %)</div>
-        <div><i style="background:#1f6fb8"></i>Reconnaissance IA des photos (~30 %)</div>
-        <div><i style="background:#c98a1e"></i>Hébergement des données et photos (~30 %)</div>
-        <div><i style="background:#a9bed3"></i>Nouvelles fonctions et espèces (~25 %)</div>
+    </div>
+  </section>
+
+  <section class="block" id="tarifs">
+    <div class="wrap">
+      <div class="eyebrow">Tarifs</div>
+      <h2>L'essentiel est gratuit.</h2>
+      <p class="sub">Prises illimitées pour tous. Le Premium est là pour ceux qui veulent aller plus loin.</p>
+      <div class="plans">
+        <div class="plan">
+          <span class="tag">Gratuit</span>
+          <div class="price">0 €</div>
+          <div class="alt">Pour toujours</div>
+          <ul>
+            <li>Prises illimitées</li>
+            <li>10 identifications IA par mois</li>
+            <li>Collection, encyclopédie, badges</li>
+            <li>Conditions du jour et « Ça mord ? »</li>
+            <li>Groupes d'amis et classements</li>
+            <li>5 dernières prises consultables</li>
+          </ul>
+        </div>
+        <div class="plan premium">
+          <span class="tag">Premium · essai 7 jours</span>
+          <div class="price">3,99 € <small>/ mois</small></div>
+          <div class="alt">ou 39,90 € / an, soit 2 mois offerts</div>
+          <ul>
+            <li>Tout le gratuit, plus :</li>
+            <li>100 identifications IA par mois</li>
+            <li>Historique complet de tes prises</li>
+            <li>Carte des spots et statistiques par spot</li>
+            <li>Calendrier perso et alertes de saison</li>
+            <li>Statistiques détaillées et bilan de saison</li>
+            <li>Export de ton carnet</li>
+          </ul>
+        </div>
       </div>
-      <p class="muted" style="margin-top:12px">Répartition indicative, qui évoluera avec le nombre d'utilisateurs. Si les revenus dépassent les frais, ils servent à enrichir l'app : nouvelles espèces, nouvelles fonctions, et les prochaines apps de la série.</p>
     </div>
+  </section>
 
-    <h2 class="section-title">La série Odysse</h2>
-    <p class="section-lead">Un seul compte pour toute la série : ta collection, tes amis et ton abonnement te suivent d'une app à l'autre.</p>
-    <div class="series">
-      <span class="on">Pêche en mer</span>
-      <span>Pêche en rivière · bientôt</span>
-      <span>Chasse · bientôt</span>
-      <span>Ornithologie · bientôt</span>
-      <span>Insectes · bientôt</span>
-      <span>Voyages · bientôt</span>
+  <section class="block" id="transparence">
+    <div class="wrap">
+      <div class="eyebrow">Transparence</div>
+      <h2>Où va ton abonnement.</h2>
+      <p class="sub">Pas de publicité, pas de revente de données. Les abonnements servent d'abord à payer ce qui fait tourner l'app : l'intelligence artificielle et l'hébergement.</p>
+      <div class="transparency">
+        <div class="donut" style="background: conic-gradient(#0e2a47 0 15%, #1f6fb8 15% 45%, #c98a1e 45% 75%, #a9bed3 75% 100%); border-radius: 50%;">
+          <div style="position:absolute;inset:22%;background:#f4f7fa;border-radius:50%"></div>
+          <div class="center"><div><b>3,99 €</b><span>par mois</span></div></div>
+        </div>
+        <div>
+          <div class="legend">
+            <div><i style="background:#1f6fb8"></i><span>Reconnaissance IA<small>Chaque photo analysée a un coût réel</small></span><b>~30 %</b></div>
+            <div><i style="background:#c98a1e"></i><span>Hébergement<small>Tes prises, tes photos, tes groupes, en Europe</small></span><b>~30 %</b></div>
+            <div><i style="background:#a9bed3"></i><span>Nouvelles espèces et fonctions<small>Et les prochaines apps de la série</small></span><b>~25 %</b></div>
+            <div><i style="background:#0e2a47"></i><span>Commission de l'App Store<small>Prélevée par Apple et Google</small></span><b>15 %</b></div>
+          </div>
+          <p class="muted" style="color:var(--muted);font-size:14px;margin-top:14px">Répartition indicative, qui évoluera avec le nombre d'utilisateurs.</p>
+        </div>
+      </div>
+      <div class="promise">
+        <span>Aucune publicité</span>
+        <span>Aucune donnée revendue</span>
+        <span>Données hébergées en Europe</span>
+        <span>Export et suppression du compte à tout moment</span>
+      </div>
     </div>
+  </section>
 
-    <h2 class="section-title">Tes données</h2>
-    <div class="card">
-      <p>Tes spots sont privés par défaut, tu choisis ce que tes amis voient, et aucune image partagée ne contient ta position. Tu peux télécharger toutes tes données ou supprimer ton compte depuis l'app, à tout moment. <a href="confidentialite.html">Lire la politique de confidentialité</a>.</p>
+  <section class="block">
+    <div class="wrap">
+      <div class="eyebrow">La série Odysse</div>
+      <h2>Un compte, toute la série.</h2>
+      <p class="sub">Ta collection, tes amis et ton abonnement te suivront d'une app à l'autre.</p>
+      <div class="series">
+        <div class="on"><i style="background:#1f6fb8"></i>Pêche en mer<small>Bêta</small></div>
+        <div><i style="background:#2e8b6a"></i>Pêche en rivière<small>Bientôt</small></div>
+        <div><i style="background:#8a5a2b"></i>Chasse<small>Bientôt</small></div>
+        <div><i style="background:#6a5acd"></i>Ornithologie<small>Bientôt</small></div>
+        <div><i style="background:#c98a1e"></i>Insectes<small>Bientôt</small></div>
+        <div><i style="background:#c2410c"></i>Voyages<small>Bientôt</small></div>
+      </div>
     </div>
-  </main>
+  </section>
 
-  <footer class="wrap" style="margin-top:40px">
-    <a href="mailto:contact@odysse.app">Contact</a>
-    <a href="confidentialite.html">Confidentialité</a>
-    <a href="privacy.html">Privacy (English)</a>
-    <a href="mentions-legales.html">Mentions légales</a>
+  <section class="final">
+    <svg class="lines" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.2" aria-hidden="true">
+        <path d="M0 20.0 L16 23.9 L32 27.5 L48 30.6 L64 33.0 L80 34.6 L96 35.4 L112 35.4 L128 34.7 L144 33.5 L160 32.0 L176 30.5 L192 29.1 L208 28.1 L224 27.4 L240 27.2 L256 27.4 L272 27.9 L288 28.5 L304 29.1 L320 29.4 L336 29.3 L352 28.5 L368 27.0 L384 24.9 L400 22.1 L416 18.8 L432 15.2 L448 11.5 L464 8.1 L480 5.2 L496 2.9 L512 1.4 L528 0.8 L544 1.2 L560 2.4 L576 4.2 L592 6.5 L608 9.0 L624 11.5 L640 13.8 L656 15.7 L672 17.1 L688 17.9 L704 18.3 L720 18.4 L736 18.2 L752 18.0 L768 18.1 L784 18.5 L800 19.4 L816 20.9 L832 23.0 L848 25.5 L864 28.4 L880 31.4 L896 34.2 L912 36.7 L928 38.6 L944 39.7 L960 39.9 L976 39.1 L992 37.5 L1008 35.1 L1024 32.1 L1040 28.8 L1056 25.4 L1072 22.2 L1088 19.4 L1104 17.1 L1120 15.5 L1136 14.5 L1152 14.1 L1168 14.1 L1184 14.4 L1200 14.7 L1216 14.9 L1232 14.8 L1248 14.3 L1264 13.4 L1280 11.9 L1296 10.1 L1312 8.1 L1328 6.1 L1344 4.4 L1360 3.1 L1376 2.5 L1392 2.6 L1408 3.7 L1424 5.6 L1440 8.3"/>
+        <path d="M0 88.0 L16 89.6 L32 90.5 L48 90.5 L64 89.7 L80 88.5 L96 86.9 L112 85.2 L128 83.6 L144 82.3 L160 81.4 L176 80.9 L192 80.9 L208 81.2 L224 81.7 L240 82.2 L256 82.5 L272 82.4 L288 81.7 L304 80.4 L320 78.3 L336 75.7 L352 72.5 L368 69.0 L384 65.4 L400 62.1 L416 59.1 L432 56.8 L448 55.4 L464 54.8 L480 55.2 L496 56.4 L512 58.3 L528 60.7 L544 63.3 L560 66.0 L576 68.5 L592 70.6 L608 72.2 L624 73.2 L640 73.8 L656 73.9 L672 73.8 L688 73.6 L704 73.6 L720 73.9 L736 74.7 L752 76.0 L768 77.9 L784 80.2 L800 82.9 L816 85.7 L832 88.5 L848 90.9 L864 92.7 L880 93.8 L896 94.0 L912 93.2 L928 91.6 L944 89.2 L960 86.1 L976 82.8 L992 79.3 L1008 75.9 L1024 73.0 L1040 70.5 L1056 68.8 L1072 67.6 L1088 67.1 L1104 67.1 L1120 67.5 L1136 67.9 L1152 68.3 L1168 68.4 L1184 68.1 L1200 67.3 L1216 66.1 L1232 64.5 L1248 62.7 L1264 60.9 L1280 59.3 L1296 58.0 L1312 57.4 L1328 57.6 L1344 58.6 L1360 60.5 L1376 63.1 L1392 66.4 L1408 70.1 L1424 74.0 L1440 77.8"/>
+        <path d="M0 144.7 L16 143.4 L32 141.7 L48 139.8 L64 138.0 L80 136.5 L96 135.3 L112 134.6 L128 134.4 L144 134.5 L160 134.9 L176 135.3 L192 135.6 L208 135.5 L224 134.9 L240 133.7 L256 131.8 L272 129.3 L288 126.2 L304 122.9 L320 119.4 L336 116.1 L352 113.2 L368 110.9 L384 109.4 L400 108.8 L416 109.2 L432 110.4 L448 112.4 L464 114.9 L480 117.7 L496 120.5 L512 123.2 L528 125.5 L544 127.3 L560 128.5 L576 129.2 L592 129.4 L608 129.4 L624 129.2 L640 129.1 L656 129.3 L672 129.9 L688 131.1 L704 132.7 L720 134.9 L736 137.4 L752 140.1 L768 142.7 L784 145.0 L800 146.8 L816 147.8 L832 148.0 L848 147.2 L864 145.6 L880 143.2 L896 140.1 L912 136.7 L928 133.1 L944 129.6 L960 126.5 L976 124.0 L992 122.0 L1008 120.8 L1024 120.2 L1040 120.2 L1056 120.6 L1072 121.1 L1088 121.6 L1104 121.9 L1120 121.8 L1136 121.3 L1152 120.3 L1168 119.0 L1184 117.4 L1200 115.7 L1216 114.2 L1232 113.0 L1248 112.4 L1264 112.6 L1280 113.6 L1296 115.4 L1312 118.0 L1328 121.2 L1344 124.9 L1360 128.8 L1376 132.6 L1392 136.1 L1408 139.0 L1424 141.3 L1440 142.7"/>
+        <path d="M0 192.4 L16 190.6 L32 189.2 L48 188.3 L64 187.9 L80 187.8 L96 188.1 L112 188.4 L128 188.7 L144 188.6 L160 188.1 L176 187.0 L192 185.2 L208 182.9 L224 180.0 L240 176.7 L256 173.4 L272 170.1 L288 167.3 L304 165.0 L320 163.5 L336 163.0 L352 163.3 L368 164.6 L384 166.6 L400 169.1 L416 172.1 L432 175.0 L448 177.9 L464 180.4 L480 182.4 L496 183.8 L512 184.6 L528 185.0 L544 184.9 L560 184.8 L576 184.6 L592 184.7 L608 185.1 L624 186.1 L640 187.5 L656 189.5 L672 191.8 L688 194.3 L704 196.8 L720 199.0 L736 200.7 L752 201.7 L768 201.9 L784 201.2 L800 199.6 L816 197.1 L832 194.1 L848 190.6 L864 186.9 L880 183.3 L896 180.1 L912 177.4 L928 175.4 L944 174.0 L960 173.4 L976 173.3 L992 173.7 L1008 174.3 L1024 175.0 L1040 175.5 L1056 175.6 L1072 175.3 L1088 174.6 L1104 173.5 L1120 172.1 L1136 170.6 L1152 169.2 L1168 168.1 L1184 167.5 L1200 167.7 L1216 168.6 L1232 170.4 L1248 172.9 L1264 176.1 L1280 179.8 L1296 183.7 L1312 187.5 L1328 191.0 L1344 194.0 L1360 196.3 L1376 197.8 L1392 198.4 L1408 198.2 L1424 197.4 L1440 196.2"/>
+        <path d="M0 241.3 L16 241.1 L32 241.2 L48 241.5 L64 241.7 L80 241.7 L96 241.2 L112 240.3 L128 238.7 L144 236.5 L160 233.7 L176 230.6 L192 227.4 L208 224.2 L224 221.4 L240 219.2 L256 217.7 L272 217.2 L288 217.5 L304 218.8 L320 220.8 L336 223.5 L352 226.5 L368 229.6 L384 232.6 L400 235.3 L416 237.5 L432 239.0 L448 240.0 L464 240.5 L480 240.5 L496 240.3 L512 240.1 L528 240.1 L544 240.4 L560 241.1 L576 242.3 L592 244.1 L608 246.2 L624 248.5 L640 250.8 L656 253.0 L672 254.6 L688 255.6 L704 255.8 L720 255.1 L736 253.5 L752 251.0 L768 247.9 L784 244.4 L800 240.7 L816 237.0 L832 233.7 L848 230.9 L864 228.7 L880 227.3 L896 226.6 L912 226.5 L928 226.9 L944 227.6 L960 228.4 L976 229.1 L992 229.4 L1008 229.4 L1024 228.9 L1040 228.0 L1056 226.9 L1072 225.5 L1088 224.2 L1104 223.2 L1120 222.7 L1136 222.8 L1152 223.7 L1168 225.4 L1184 227.9 L1200 231.0 L1216 234.7 L1232 238.5 L1248 242.4 L1264 245.9 L1280 249.0 L1296 251.3 L1312 252.8 L1328 253.5 L1344 253.3 L1360 252.5 L1376 251.1 L1392 249.5 L1408 247.8 L1424 246.2 L1440 244.9"/>
+        <path d="M0 294.7 L16 294.7 L32 294.4 L48 293.5 L64 292.1 L80 290.1 L96 287.5 L112 284.6 L128 281.4 L144 278.4 L160 275.7 L176 273.5 L192 272.0 L208 271.4 L224 271.8 L240 273.1 L256 275.2 L272 277.9 L288 281.0 L304 284.2 L320 287.4 L336 290.2 L352 292.6 L368 294.3 L384 295.4 L400 296.0 L416 296.1 L432 295.9 L448 295.6 L464 295.4 L480 295.6 L496 296.1 L512 297.1 L528 298.6 L544 300.5 L560 302.7 L576 304.8 L592 306.8 L608 308.4 L624 309.4 L640 309.6 L656 308.9 L672 307.3 L688 304.9 L704 301.8 L720 298.2 L736 294.4 L752 290.7 L768 287.3 L784 284.3 L800 282.1 L816 280.6 L832 279.8 L848 279.7 L864 280.1 L880 280.9 L896 281.8 L912 282.7 L928 283.3 L944 283.5 L960 283.3 L976 282.6 L992 281.7 L1008 280.5 L1024 279.3 L1040 278.4 L1056 277.9 L1072 278.0 L1088 278.8 L1104 280.5 L1120 282.9 L1136 286.0 L1152 289.5 L1168 293.4 L1184 297.2 L1200 300.8 L1216 303.9 L1232 306.2 L1248 307.8 L1264 308.5 L1280 308.3 L1296 307.4 L1312 306.0 L1328 304.2 L1344 302.3 L1360 300.5 L1376 299.0 L1392 298.0 L1408 297.3 L1424 297.2 L1440 297.3"/>
+        <path d="M0 345.5 L16 343.7 L32 341.3 L48 338.5 L64 335.6 L80 332.6 L96 330.0 L112 327.8 L128 326.4 L144 325.8 L160 326.2 L176 327.5 L192 329.6 L208 332.3 L224 335.5 L240 338.9 L256 342.2 L272 345.2 L288 347.7 L304 349.6 L320 350.8 L336 351.5 L352 351.6 L368 351.4 L384 351.1 L400 350.8 L416 350.7 L432 351.1 L448 351.9 L464 353.1 L480 354.8 L496 356.8 L512 358.8 L528 360.7 L544 362.2 L560 363.1 L576 363.3 L592 362.6 L608 361.0 L624 358.7 L640 355.6 L656 352.0 L672 348.2 L688 344.4 L704 340.9 L720 337.9 L736 335.5 L752 333.9 L768 333.1 L784 333.0 L800 333.4 L816 334.3 L832 335.3 L848 336.4 L864 337.2 L880 337.6 L896 337.7 L912 337.3 L928 336.5 L944 335.5 L960 334.5 L976 333.6 L992 333.2 L1008 333.2 L1024 334.0 L1040 335.6 L1056 337.9 L1072 340.9 L1088 344.4 L1104 348.2 L1120 352.0 L1136 355.6 L1152 358.7 L1168 361.1 L1184 362.7 L1200 363.4 L1216 363.2 L1232 362.3 L1248 360.8 L1264 358.9 L1280 356.8 L1296 354.9 L1312 353.1 L1328 351.8 L1344 351.0 L1360 350.6 L1376 350.6 L1392 350.9 L1408 351.2 L1424 351.4 L1440 351.3"/>
+        <path d="M0 389.7 L16 386.9 L32 384.3 L48 382.2 L64 380.8 L80 380.3 L96 380.6 L112 381.9 L128 384.0 L144 386.8 L160 390.1 L176 393.6 L192 397.0 L208 400.1 L224 402.8 L240 404.8 L256 406.2 L272 406.9 L288 407.1 L304 406.9 L320 406.5 L336 406.1 L352 405.9 L368 406.0 L384 406.6 L400 407.6 L416 409.1 L432 410.8 L448 412.7 L464 414.4 L480 415.9 L496 416.7 L512 416.9 L528 416.3 L544 414.7 L560 412.4 L576 409.3 L592 405.8 L608 401.9 L624 398.1 L640 394.5 L656 391.4 L672 388.9 L688 387.3 L704 386.4 L720 386.3 L736 386.8 L752 387.7 L768 388.9 L784 390.1 L800 391.1 L816 391.8 L832 392.1 L848 391.9 L864 391.4 L880 390.6 L896 389.7 L912 388.9 L928 388.5 L944 388.6 L960 389.3 L976 390.8 L992 393.0 L1008 395.9 L1024 399.3 L1040 403.0 L1056 406.8 L1072 410.4 L1088 413.5 L1104 415.9 L1120 417.5 L1136 418.2 L1152 418.1 L1168 417.1 L1184 415.5 L1200 413.5 L1216 411.3 L1232 409.1 L1248 407.2 L1264 405.6 L1280 404.6 L1296 404.0 L1312 403.8 L1328 404.0 L1344 404.2 L1360 404.4 L1376 404.3 L1392 403.8 L1408 402.7 L1424 401.0 L1440 398.7"/>
+        <path d="M0 435.4 L16 434.8 L32 435.2 L48 436.5 L64 438.6 L80 441.4 L96 444.7 L112 448.3 L128 451.8 L144 455.1 L160 457.9 L176 460.1 L192 461.6 L208 462.4 L224 462.6 L240 462.4 L256 461.9 L272 461.4 L288 461.0 L304 460.9 L320 461.3 L336 462.1 L352 463.3 L368 464.8 L384 466.5 L400 468.1 L416 469.5 L432 470.3 L448 470.5 L464 469.8 L480 468.4 L496 466.1 L512 463.0 L528 459.5 L544 455.7 L560 451.8 L576 448.1 L592 445.0 L608 442.5 L624 440.7 L640 439.8 L656 439.6 L672 440.2 L688 441.2 L704 442.5 L720 443.9 L736 445.1 L752 446.0 L768 446.6 L784 446.7 L800 446.3 L816 445.7 L832 445.0 L848 444.3 L864 443.9 L880 443.9 L896 444.6 L912 446.0 L928 448.1 L944 450.9 L960 454.2 L976 457.8 L992 461.5 L1008 465.1 L1024 468.2 L1040 470.6 L1056 472.3 L1072 473.0 L1088 472.9 L1104 471.9 L1120 470.2 L1136 468.1 L1152 465.7 L1168 463.4 L1184 461.2 L1200 459.4 L1216 458.1 L1232 457.4 L1248 457.0 L1264 457.0 L1280 457.2 L1296 457.4 L1312 457.4 L1328 457.0 L1344 456.0 L1360 454.5 L1376 452.4 L1392 449.8 L1408 446.8 L1424 443.7 L1440 440.7"/>
+        <path d="M0 493.2 L16 496.0 L32 499.4 L48 503.0 L64 506.6 L80 510.0 L96 512.9 L112 515.3 L128 516.9 L144 517.8 L160 518.1 L176 517.8 L192 517.3 L208 516.7 L224 516.1 L240 515.8 L256 515.9 L272 516.5 L288 517.4 L304 518.7 L320 520.2 L336 521.7 L352 523.0 L368 523.8 L384 524.0 L400 523.4 L416 521.9 L432 519.7 L448 516.7 L464 513.2 L480 509.4 L496 505.5 L512 501.8 L528 498.6 L544 496.0 L560 494.2 L576 493.2 L592 493.1 L608 493.6 L624 494.7 L640 496.1 L656 497.7 L672 499.1 L688 500.3 L704 501.1 L720 501.4 L736 501.3 L752 500.9 L768 500.3 L784 499.7 L800 499.3 L816 499.3 L832 499.9 L848 501.2 L864 503.2 L880 505.9 L896 509.1 L912 512.6 L928 516.3 L944 519.8 L960 522.8 L976 525.3 L992 527.0 L1008 527.7 L1024 527.5 L1040 526.5 L1056 524.8 L1072 522.6 L1088 520.1 L1104 517.6 L1120 515.2 L1136 513.2 L1152 511.7 L1168 510.7 L1184 510.2 L1200 510.1 L1216 510.2 L1232 510.4 L1248 510.4 L1264 510.1 L1280 509.3 L1296 508.0 L1312 506.0 L1328 503.6 L1344 500.8 L1360 497.8 L1376 494.9 L1392 492.4 L1408 490.3 L1424 489.1 L1440 488.7"/>
+        <path d="M0 561.5 L16 565.0 L32 568.0 L48 570.4 L64 572.2 L80 573.2 L96 573.5 L112 573.2 L128 572.6 L144 571.9 L160 571.2 L176 570.7 L192 570.5 L208 570.8 L224 571.6 L240 572.6 L256 574.0 L272 575.3 L288 576.5 L304 577.2 L320 577.4 L336 576.8 L352 575.4 L368 573.3 L384 570.4 L400 566.9 L416 563.1 L432 559.2 L448 555.5 L464 552.2 L480 549.6 L496 547.7 L512 546.7 L528 546.6 L544 547.1 L560 548.3 L576 549.9 L592 551.6 L608 553.2 L624 554.6 L640 555.6 L656 556.2 L672 556.3 L688 556.1 L704 555.6 L720 555.1 L736 554.7 L752 554.7 L768 555.3 L784 556.5 L800 558.4 L816 560.9 L832 564.0 L848 567.4 L864 570.9 L880 574.4 L896 577.4 L912 579.9 L928 581.6 L944 582.3 L960 582.2 L976 581.1 L992 579.4 L1008 577.0 L1024 574.4 L1040 571.7 L1056 569.2 L1072 567.0 L1088 565.2 L1104 564.1 L1120 563.4 L1136 563.2 L1152 563.2 L1168 563.4 L1184 563.5 L1200 563.3 L1216 562.6 L1232 561.4 L1248 559.7 L1264 557.4 L1280 554.8 L1296 552.0 L1312 549.2 L1328 546.8 L1344 544.8 L1360 543.5 L1376 543.2 L1392 543.7 L1408 545.2 L1424 547.4 L1440 550.3"/>
+        <path d="M0 627.4 L16 628.5 L32 628.8 L48 628.6 L64 627.9 L80 627.1 L96 626.2 L112 625.5 L128 625.1 L144 625.1 L160 625.6 L176 626.5 L192 627.6 L208 628.8 L224 629.9 L240 630.6 L256 630.8 L272 630.2 L288 628.9 L304 626.8 L320 624.0 L336 620.6 L352 616.8 L368 613.0 L384 609.2 L400 605.9 L416 603.3 L432 601.4 L448 600.3 L464 600.1 L480 600.7 L496 602.0 L512 603.6 L528 605.5 L544 607.3 L560 609.0 L576 610.2 L592 611.0 L608 611.3 L624 611.3 L640 611.0 L656 610.5 L672 610.2 L688 610.2 L704 610.7 L720 611.8 L736 613.5 L752 615.9 L768 618.8 L784 622.1 L800 625.6 L816 629.0 L832 632.0 L848 634.4 L864 636.1 L880 636.8 L896 636.7 L912 635.6 L928 633.8 L944 631.4 L960 628.7 L976 625.8 L992 623.1 L1008 620.7 L1024 618.8 L1040 617.4 L1056 616.6 L1072 616.2 L1088 616.2 L1104 616.4 L1120 616.5 L1136 616.4 L1152 615.9 L1168 614.9 L1184 613.4 L1200 611.3 L1216 608.9 L1232 606.2 L1248 603.6 L1264 601.2 L1280 599.3 L1296 598.1 L1312 597.7 L1328 598.2 L1344 599.7 L1360 602.0 L1376 604.9 L1392 608.3 L1408 611.9 L1424 615.4 L1440 618.6"/>
+        <path d="M0 683.2 L16 682.2 L32 681.1 L48 680.2 L64 679.6 L80 679.4 L96 679.7 L112 680.3 L128 681.2 L144 682.3 L160 683.2 L176 683.9 L192 684.1 L208 683.6 L224 682.3 L240 680.3 L256 677.6 L272 674.2 L288 670.6 L304 666.7 L320 663.0 L336 659.7 L352 657.0 L368 655.0 L384 654.0 L400 653.8 L416 654.4 L432 655.7 L448 657.5 L464 659.5 L480 661.5 L496 663.3 L512 664.8 L528 665.9 L544 666.4 L560 666.5 L576 666.4 L592 666.0 L608 665.7 L624 665.7 L640 666.1 L656 667.1 L672 668.7 L688 670.9 L704 673.7 L720 676.9 L736 680.2 L752 683.5 L768 686.5 L784 688.9 L800 690.5 L816 691.3 L832 691.1 L848 690.1 L864 688.2 L880 685.7 L896 682.9 L912 679.9 L928 677.0 L944 674.4 L960 672.3 L976 670.7 L992 669.7 L1008 669.3 L1024 669.2 L1040 669.4 L1056 669.6 L1072 669.6 L1088 669.2 L1104 668.4 L1120 667.1 L1136 665.2 L1152 663.0 L1168 660.5 L1184 658.0 L1200 655.7 L1216 653.9 L1232 652.7 L1248 652.3 L1264 652.9 L1280 654.3 L1296 656.6 L1312 659.5 L1328 663.0 L1344 666.6 L1360 670.2 L1376 673.6 L1392 676.4 L1408 678.6 L1424 680.1 L1440 680.9"/>
+        <path d="M0 734.1 L16 733.7 L32 733.7 L48 734.1 L64 734.8 L80 735.7 L96 736.6 L112 737.2 L128 737.3 L144 736.9 L160 735.7 L176 733.8 L192 731.1 L208 727.9 L224 724.3 L240 720.5 L256 716.8 L272 713.5 L288 710.8 L304 708.8 L320 707.7 L336 707.5 L352 708.1 L368 709.5 L384 711.3 L400 713.5 L416 715.7 L432 717.8 L448 719.5 L464 720.7 L480 721.5 L496 721.8 L512 721.8 L528 721.5 L544 721.3 L560 721.2 L576 721.6 L592 722.4 L608 723.9 L624 725.9 L640 728.5 L656 731.6 L672 734.8 L688 738.0 L704 740.9 L720 743.2 L736 744.9 L752 745.7 L768 745.5 L784 744.4 L800 742.5 L816 740.0 L832 737.0 L848 733.9 L864 730.8 L880 728.1 L896 725.8 L912 724.1 L928 722.9 L944 722.4 L960 722.2 L976 722.4 L992 722.6 L1008 722.7 L1024 722.5 L1040 721.9 L1056 720.8 L1072 719.2 L1088 717.2 L1104 714.9 L1120 712.5 L1136 710.4 L1152 708.6 L1168 707.4 L1184 707.1 L1200 707.6 L1216 709.0 L1232 711.3 L1248 714.2 L1264 717.7 L1280 721.4 L1296 725.1 L1312 728.5 L1328 731.5 L1344 733.8 L1360 735.4 L1376 736.3 L1392 736.5 L1408 736.1 L1424 735.5 L1440 734.7"/>
+    </svg>
+    <div class="wrap" style="position:relative">
+      <div class="kicker">Bêta privée</div>
+      <h2>Embarque avec nous.</h2>
+      <p>Odysse est en test avec une poignée de pêcheurs. Écris-nous pour rejoindre la bêta sur iPhone et nous aider à construire l'app.</p>
+      <a class="btn btn-light" href="mailto:contact@odysse.app?subject=B%C3%AAta%20Odysse">Rejoindre la bêta</a>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div>
+        <p><b style="color:#fff;font:600 20px Newsreader,serif">Odysse</b> · Pêche en mer</p>
+        <p><a href="mailto:contact@odysse.app">Contact</a><a href="confidentialite.html">Confidentialité</a><a href="privacy.html">Privacy</a><a href="mentions-legales.html">Mentions légales</a></p>
+      </div>
+      <div class="credits">
+        Captures de l'app avec des données de démonstration. Photos d'espèces : Wikimedia Commons — bar commun © Miguel Mendez (CC BY 2.0), daurade royale © Julien Renoult (CC BY 4.0), maquereau © Mikael Nyman (CC BY 4.0), denti © michael_bommerer (CC BY 4.0) ; autres photos de la collection : auteurs et licences indiqués dans l'app. Fond de carte : Apple Plans.
+      </div>
+    </div>
   </footer>
 </body>
 </html>
