@@ -118,6 +118,16 @@ h2 { font: 600 44px/1.1 'Newsreader', serif; margin: 10px 0 14px; }
   background: var(--tint);
   z-index: -1;
 }
+.story-card {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 9 / 16;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(14, 42, 71, 0.3);
+  transform: rotate(-3deg);
+}
+.story-card img { width: 100%; height: 100%; object-fit: cover; }
 .card-shot {
   border-radius: 20px;
   border: 1px solid var(--border);
@@ -192,7 +202,7 @@ nav .nav-lure + .btn { margin-left: 0; }
 .lure-strip { padding: 40px 0 0; }
 .lure-strip-in { display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; padding: 22px 26px; border-radius: 20px; background: #fbf3e4; border: 1px solid #efd9ad; }
 .lure-strip-in b { display: block; font: 600 22px/1.25 'Newsreader', serif; }
-.lure-strip-in span { color: var(--muted); font-size: 15px; }
+.lure-strip-in > div > span { color: var(--muted); font-size: 15px; }
 .lure-big { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: #fff; flex: none; }
 .lure-big .lure-ico { width: 30px; height: 30px; }
 .plans-note { margin-top: 20px; color: var(--muted); font-size: 15px; }
@@ -291,5 +301,6 @@ footer.site .credits { font-size: 12px; line-height: 1.6; opacity: 0.8; }
   h2 { font-size: 34px; }
   .feature h3 { font-size: 28px; }
   .visual .phone { width: 240px; }
+  .story-card { width: 250px; }
   .visual .phone.small { width: 180px; }
 }
