@@ -7,6 +7,7 @@
   --text: #0e2a47;
   --muted: #5e738a;
   --accent: #1f6fb8;
+  --gold: #c98a1e;
 }
 * { box-sizing: border-box; }
 body {
@@ -108,4 +109,34 @@ footer a { margin-right: 16px; }
 @media (max-width: 720px) {
   .grid, .grid-2, .legend { grid-template-columns: 1fr; }
   .hero h1 { font-size: 40px; }
+}
+
+/* Menu et pied de page communs (mêmes que l'accueil) */
+.topnav { position: sticky; top: 0; z-index: 10; background: rgba(14, 42, 71, 0.95); backdrop-filter: blur(10px); }
+.navwrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 24px; min-height: 64px; }
+.topnav .logo { color: #fff; text-decoration: none; display: flex; align-items: baseline; gap: 10px; }
+.topnav .logo b { font: 600 22px 'Newsreader', serif; }
+.topnav .logo span { font: 500 11px 'IBM Plex Mono', monospace; letter-spacing: 2px; color: var(--deep-2); text-transform: uppercase; }
+.topnav .links { display: flex; gap: 22px; margin-left: auto; }
+.topnav .links a { color: var(--deep-2); text-decoration: none; font-size: 15px; }
+.topnav .links a:hover, .topnav .links a[aria-current] { color: #fff; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 12px; font-weight: 600; font-size: 15px; text-decoration: none; white-space: nowrap; }
+.btn-light { background: #fff; color: var(--deep); }
+.btn-lure { background: var(--gold); color: #fff; }
+.btn-lure:hover { background: #b57a14; }
+.nav-lure { font-size: 14px; padding: 8px 14px; }
+header { padding-top: 40px; }
+.lang-switch { display: inline-block; margin: 4px 0 14px; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.35); color: #fff; text-decoration: none; font-size: 14px; }
+.lang-switch:hover { background: rgba(255, 255, 255, 0.1); }
+footer.site { background: #0a2038; color: var(--deep-2); padding: 30px 0 40px; font-size: 14px; margin-top: 24px; }
+footer.site .navwrap { flex-direction: column; align-items: flex-start; gap: 6px; }
+footer.site p { margin: 0; }
+footer.site .foot-logo { color: #fff; font: 600 20px 'Newsreader', serif; }
+footer.site .foot-links a { color: #fff; margin-right: 18px; white-space: nowrap; display: inline-block; }
+.lure-float { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: var(--gold); color: #fff; font-weight: 600; font-size: 15px; text-decoration: none; box-shadow: 0 10px 24px rgba(14, 42, 71, 0.25); }
+@media (max-width: 900px) {
+  .topnav .links, .topnav .logo span, .nav-lure { display: none; }
+  .topnav .btn-light { margin-left: auto; }
+  .lure-float { padding: 12px; }
+  .lure-float span { display: none; }
 }
