@@ -4,55 +4,389 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Aide · Odysse</title>
-  <meta name="description" content="Aide et support de l'app Odysse · Pêche en mer : compte, identification des poissons, confidentialité, suppression du compte." />
+  <meta name="description" content="Aide et support de l'app Odysse · Pêche en mer : compte, prises, identification par IA, collection, marées, spots, groupes, communautés, Premium, confidentialité." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&family=Newsreader:wght@600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .search { position: relative; margin-top: 24px; }
+    .search input {
+      width: 100%; padding: 14px 16px 14px 46px; border-radius: 12px; border: 0;
+      font: 16px 'IBM Plex Sans', sans-serif; color: var(--text);
+    }
+    .search svg { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+    .toc a {
+      padding: 7px 13px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border);
+      text-decoration: none; color: var(--text); font-size: 14px;
+    }
+    .toc a:hover { border-color: var(--accent); color: var(--accent); }
+    section h2 { display: flex; align-items: center; gap: 10px; }
+    section h2 .ico { width: 34px; height: 34px; border-radius: 10px; background: #e7f0f8; display: grid; place-items: center; flex: none; }
+    details { border-top: 1px solid var(--border); padding: 12px 0; }
+    details:first-of-type { border-top: 0; }
+    summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: '+'; color: var(--accent); font: 600 20px/1 'IBM Plex Mono', monospace; }
+    details[open] summary::after { content: '−'; }
+    details p, details ul { margin: 10px 0 0; color: #33475b; }
+    details li { margin-bottom: 4px; }
+    .contact { background: var(--deep); color: #fff; border: 0; }
+    .contact h2, .contact p { color: #fff; }
+    .contact p { color: var(--deep-2); }
+    .contact a { color: #fff; font-weight: 600; }
+    .empty { display: none; text-align: center; color: var(--muted); padding: 24px; }
+    mark { background: #fbf3e4; padding: 0 2px; border-radius: 3px; }
+  </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <div class="kicker"><a href="index.html" style="color:inherit;text-decoration:none">Odysse</a></div>
+      <div class="kicker"><a href="index.html" style="color:inherit;text-decoration:none">Odysse · Pêche en mer</a></div>
       <h1>Aide et support</h1>
-      <p>Une question, un bug, une idée ? Écris-nous à <a href="mailto:support@odysse.app">support@odysse.app</a>, on répond sous 48 h.</p>
+      <p>Toutes les réponses pour bien démarrer. Une question sans réponse ? <a href="mailto:support@odysse.app" style="color:#fff">support@odysse.app</a></p>
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#5e738a" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg>
+        <input id="q" type="search" placeholder="Rechercher : code, marée, spot, communauté…" aria-label="Rechercher dans l'aide" />
+      </div>
     </div>
   </header>
+
   <main class="wrap">
-    <section>
-      <h2>Créer un compte et se connecter</h2>
-      <p>Odysse fonctionne sans mot de passe : entre ton e-mail, puis le code à 8 chiffres reçu par e-mail (pense à regarder dans les indésirables). Si tu demandes plusieurs codes, utilise toujours celui du dernier e-mail. Tu peux aussi te connecter avec Apple ou Google.</p>
-      <p>Une fois connecté, tu le restes sur ton téléphone. Tes prises sont sauvegardées et retrouvées sur un autre téléphone en te connectant avec la même adresse.</p>
+    <nav class="toc" aria-label="Sommaire">
+      <a href="#demarrer">Démarrer</a>
+      <a href="#compte">Compte et connexion</a>
+      <a href="#prises">Prises et carnet</a>
+      <a href="#ia">Identification IA</a>
+      <a href="#collection">Collection</a>
+      <a href="#conditions">Marées et météo</a>
+      <a href="#spots">Carte et spots</a>
+      <a href="#amis">Groupes d'amis</a>
+      <a href="#communautes">Communautés</a>
+      <a href="#premium">Premium</a>
+      <a href="#donnees">Données et compte</a>
+      <a href="#problemes">Problèmes fréquents</a>
+    </nav>
+
+    <section id="demarrer">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>Démarrer</h2>
+      <details open>
+        <summary>Comment fonctionne Odysse ?</summary>
+        <p>Tu photographies ta prise avec le bouton central <strong>Prise</strong>. L'IA propose l'espèce, la position, l'heure, la marée et la météo sont notées automatiquement, et tu complètes ton carnet en quelques secondes. La carte de l'espèce se débloque alors dans ta collection.</p>
+      </details>
+      <details>
+        <summary>Sur quels téléphones ?</summary>
+        <p>iPhone d'abord (iOS récent), Android ensuite. L'app est en français et en anglais, selon la langue de ton téléphone.</p>
+      </details>
+      <details>
+        <summary>Quelles zones sont couvertes ?</summary>
+        <p>La Manche, l'Atlantique et la Méditerranée françaises : plus de 150 espèces de poissons, céphalopodes, crustacés et coquillages, avec la réglementation par façade.</p>
+      </details>
     </section>
-    <section>
-      <h2>Identifier un poisson</h2>
-      <p>Prends ta prise en photo avec le bouton central. L'IA propose jusqu'à trois espèces avec les signes à vérifier. Si aucune ne convient, choisis l'espèce à la main : la prise est alors marquée « non vérifiée ». Pendant la bêta, chaque compte dispose de 30 identifications par mois.</p>
+
+    <section id="compte">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Compte et connexion</h2>
+      <details>
+        <summary>Pourquoi faut-il un compte ?</summary>
+        <p>Ton compte sauvegarde ton carnet et tes photos en ligne : tu les retrouves sur un nouveau téléphone, et tu peux pêcher avec tes amis. Ton e-mail n'est jamais montré aux autres.</p>
+      </details>
+      <details>
+        <summary>Comment me connecter sans mot de passe ?</summary>
+        <p>Entre ton e-mail : tu reçois un <strong>code à 8 chiffres</strong> (objet « Ton code Odysse »), valable une heure. Tu peux aussi utiliser <strong>Continuer avec Apple</strong> ou <strong>Continuer avec Google</strong>.</p>
+      </details>
+      <details>
+        <summary>Je ne reçois pas le code</summary>
+        <ul>
+          <li>Regarde dans les <strong>indésirables</strong> (spam) et l'onglet Promotions de Gmail.</li>
+          <li>Vérifie l'orthographe de l'adresse.</li>
+          <li>Le bouton « Renvoyer un code » apparaît après 60 secondes. Utilise toujours le code du <strong>dernier</strong> e-mail : chaque nouvelle demande annule la précédente.</li>
+          <li>Après plusieurs demandes rapprochées, les envois sont bloqués quelques minutes par sécurité : patiente puis réessaie.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Dois-je me reconnecter à chaque fois ?</summary>
+        <p>Non. Une fois connecté, tu le restes sur ton téléphone, même sans réseau. Tu ne te reconnectes qu'après « Se déconnecter » ou sur un nouveau téléphone.</p>
+      </details>
+      <details>
+        <summary>Je change de téléphone</summary>
+        <p>Installe Odysse et connecte-toi avec la même adresse (ou le même compte Apple / Google) : tes prises et leurs photos sont récupérées automatiquement.</p>
+      </details>
+      <details>
+        <summary>Modifier mon pseudo, ma façade ou mon niveau de partage</summary>
+        <p>Dans <strong>Mon compte</strong> (icône en haut de l'accueil). Ton pseudo est le seul nom visible par tes amis et les communautés.</p>
+      </details>
     </section>
-    <section>
-      <h2>Sans réseau en mer</h2>
-      <p>Les prises s'enregistrent sans réseau et se sauvegardent automatiquement au retour du réseau. La collection et les fiches des espèces restent consultables hors ligne. L'identification par IA, elle, demande du réseau.</p>
+
+    <section id="prises">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>Prises et carnet</h2>
+      <details>
+        <summary>Enregistrer une prise</summary>
+        <p>Touche le bouton central, prends la photo, confirme l'espèce, puis remplis ce que tu veux : technique, appât ou leurre, poste, taille, poids, relâché ou gardé, note. Seule la photo est indispensable.</p>
+      </details>
+      <details>
+        <summary>Ajouter une prise depuis ma photothèque</summary>
+        <p>C'est possible et gratuit. Si la photo a gardé sa <strong>date et sa position d'origine</strong>, la prise compte normalement. Sinon (capture d'écran, image reçue par message), elle est marquée « importée » : elle apparaît dans ton carnet et ta collection, mais pas dans les records.</p>
+      </details>
+      <details>
+        <summary>Pêcher sans réseau en mer</summary>
+        <p>Tout s'enregistre sur le téléphone, sans réseau. La sauvegarde en ligne se fait toute seule au retour du réseau. La collection et les fiches restent consultables hors ligne ; seule l'identification par IA demande du réseau (sinon, choisis l'espèce à la main).</p>
+      </details>
+      <details>
+        <summary>Mesurer la taille sur la photo</summary>
+        <p>Pose le poisson à côté d'un objet connu (carte bancaire, canette, téléphone, mètre) et touche « Estimer la taille sur la photo ». C'est une estimation : vérifie au mètre si possible. Compte une identification IA.</p>
+      </details>
+      <details>
+        <summary>Mode sortie « Je pars pêcher »</summary>
+        <p>Depuis l'accueil, démarre une sortie : sa durée et toutes tes prises sont rassemblées, et le carnet se pré-remplit avec ta prise précédente. Un résumé t'attend à la fin.</p>
+      </details>
+      <details>
+        <summary>Modifier ou supprimer une prise</summary>
+        <p>Ouvre la prise depuis l'accueil ou ta collection : bouton <strong>Modifier</strong>, ou « Supprimer » tout en bas.</p>
+      </details>
+      <details>
+        <summary>Alerte « sous la taille légale »</summary>
+        <p>Odysse compare la taille saisie à la taille minimale de la façade où tu pêches. Les tailles sont données à titre indicatif : vérifie toujours la réglementation en vigueur, qui peut changer ou varier localement.</p>
+      </details>
+      <details>
+        <summary>Partager une belle prise</summary>
+        <p>Sur la fiche de la prise, touche <strong>Partager</strong> : une image au format publication ou story est créée, prête pour Instagram, Facebook, TikTok ou WhatsApp. La légende est copiée automatiquement. L'image ne contient <strong>jamais</strong> ta position.</p>
+      </details>
     </section>
-    <section>
-      <h2>Mes spots restent-ils secrets ?</h2>
-      <p>Oui. Tes positions sont privées par défaut. Avec tes groupes d'amis, tu choisis de partager rien, une zone floutée d'environ 2 km, ou le point précis. Dans les communautés, aucune position n'est jamais montrée. Les images de partage ne contiennent jamais de position.</p>
+
+    <section id="ia">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.6" y2="16.6"/></svg></span>Identification par IA</h2>
+      <details>
+        <summary>Comment l'IA reconnaît-elle mon poisson ?</summary>
+        <p>Elle propose jusqu'à trois espèces avec un indice de confiance et les signes distinctifs à vérifier. Si aucune ne convient, choisis l'espèce à la main : la prise est alors marquée « non vérifiée ».</p>
+      </details>
+      <details>
+        <summary>Conseils pour une bonne photo</summary>
+        <ul>
+          <li>Le poisson entier, de profil, à plat, bien éclairé.</li>
+          <li>Les nageoires dépliées et la tête visible.</li>
+          <li>Évite les reflets et le contre-jour.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Combien d'identifications par mois ?</summary>
+        <p>Pendant la bêta, <strong>30 identifications par mois</strong> et par compte, remises à zéro le 1er du mois. Le compteur s'affiche sous le bouton « Identifier ». Le choix manuel de l'espèce reste toujours possible, sans limite.</p>
+      </details>
+      <details>
+        <summary>« L'identification est en pause »</summary>
+        <p>Chaque photo analysée a un coût réel. Si le budget de la bêta est atteint pour le mois, l'identification se met en pause pour tout le monde jusqu'au 1er du mois suivant. Tu peux continuer à enregistrer tes prises en choisissant l'espèce à la main.</p>
+      </details>
     </section>
-    <section>
-      <h2>Signaler un contenu ou bloquer quelqu'un</h2>
-      <p>Dans une communauté, touche les trois points à côté d'une publication pour la signaler ou bloquer son auteur. Les admins de la communauté reçoivent les signalements ; tu peux aussi nous écrire à <a href="mailto:support@odysse.app">support@odysse.app</a>.</p>
+
+    <section id="collection">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Collection et fiches</h2>
+      <details>
+        <summary>Pourquoi certaines espèces sont en noir et blanc ?</summary>
+        <p>Ce sont celles que tu n'as pas encore pêchées. Dès ta première prise, la carte passe en couleur avec ta photo.</p>
+      </details>
+      <details>
+        <summary>Rareté, badges et cartes légendaires</summary>
+        <p>Chaque espèce a une rareté (commune, peu commune, rare, très rare). Des badges récompensent tes sorties (première prise, nombre d'espèces, pêche de nuit…). Une espèce prise 10 fois devient une carte légendaire.</p>
+      </details>
+      <details>
+        <summary>Espèces « Interdite » et « Réglementée »</summary>
+        <p>« Interdite » : espèce protégée ou sous moratoire, qu'on ne peut pas garder (pas de carte de prise). « Réglementée » : quotas, périodes ou déclarations particulières. Lis la section réglementation de la fiche.</p>
+      </details>
+      <details>
+        <summary>Le badge « K » sur les fiches</summary>
+        <p>Il indique un poisson considéré comme casher (à nageoires et écailles). C'est une indication générale, à confirmer auprès de ton autorité rabbinique.</p>
+      </details>
+      <details>
+        <summary>Signaler une erreur dans une fiche</summary>
+        <p>En bas de chaque fiche, touche « Signaler une erreur sur cette fiche » (taille, saison, photo, texte). Merci, ça aide toute la communauté.</p>
+      </details>
     </section>
-    <section id="supprimer-mon-compte">
-      <h2>Supprimer mon compte</h2>
-      <p>Dans l'app : <strong>Mon compte → Supprimer mon compte</strong>. Ton compte, tes prises, tes photos et les groupes que tu as créés sont effacés définitivement. Tu peux d'abord télécharger toutes tes données depuis le même écran.</p>
-      <p>Sans l'app : écris depuis l'adresse de ton compte à <a href="mailto:privacy@odysse.app?subject=Suppression%20de%20mon%20compte%20Odysse">privacy@odysse.app</a> avec l'objet « Suppression de mon compte ». La suppression est faite sous 30 jours.</p>
+
+    <section id="conditions">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 17c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M2 7c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg></span>Marées, météo et « Ça mord ? »</h2>
+      <details>
+        <summary>D'où viennent les marées et la météo ?</summary>
+        <p>D'Open-Meteo (données libres). La position utilisée est arrondie à environ 10 km : ton spot n'est jamais envoyé.</p>
+      </details>
+      <details>
+        <summary>Les horaires de marée sont-ils exacts ?</summary>
+        <p>Ce sont des estimations (précision de 30 minutes à 1 heure selon les endroits), marquées « estimé ». Pour la navigation et la sécurité, réfère-toi toujours aux annuaires officiels (SHOM).</p>
+      </details>
+      <details>
+        <summary>Pourquoi pas de coefficient en Méditerranée ?</summary>
+        <p>Le coefficient de marée n'a de sens qu'en Manche et en Atlantique ; en Méditerranée, la marée est très faible.</p>
+      </details>
+      <details>
+        <summary>Que veut dire « Ça mord ? »</summary>
+        <p>Une note ludique du jour, basée sur la marée, la lune, le vent et la pression… et sur tes propres prises : plus tu en enregistres, plus elle tient compte de tes habitudes.</p>
+      </details>
+      <details>
+        <summary>Alertes de début de saison</summary>
+        <p>Sur la fiche d'une espèce, active l'alerte : tu es prévenu quand sa saison commence. Les alertes et le calendrier personnel font partie du Premium (offert pendant la bêta).</p>
+      </details>
     </section>
-    <section>
-      <h2>Premium</h2>
-      <p>Pendant la bêta, le Premium est offert à tous et les premiers inscrits deviennent membres fondateurs. Il n'y a aucun paiement dans l'app pour l'instant.</p>
+
+    <section id="spots">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>Carte et spots</h2>
+      <details>
+        <summary>Qui voit mes positions ?</summary>
+        <p>Personne, par défaut : tes positions sont <strong>privées</strong>. Toi seul vois ta carte de prises.</p>
+      </details>
+      <details>
+        <summary>Les niveaux de partage avec mes amis</summary>
+        <ul>
+          <li><strong>Privé</strong> : aucune position partagée.</li>
+          <li><strong>Zone</strong> : une position floutée à environ 2 km, calculée par le serveur.</li>
+          <li><strong>Précis</strong> : le point exact, pour tes amis de confiance.</li>
+        </ul>
+        <p>Dans les communautés, aucune position n'est jamais montrée, quel que soit ce réglage.</p>
+      </details>
+      <details>
+        <summary>Créer un spot nommé</summary>
+        <p>Sur la carte, fais un <strong>appui long</strong> à l'endroit voulu et donne-lui un nom. Les spots restent sur ton téléphone ; leurs statistiques sont dans le Premium.</p>
+      </details>
+    </section>
+
+    <section id="amis">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>Groupes d'amis</h2>
+      <details>
+        <summary>Créer un groupe et inviter des amis</summary>
+        <p>Onglet <strong>Groupes</strong> → « Créer un groupe », puis « Inviter des amis » : envoie le lien par WhatsApp, SMS ou e-mail. Il reste valable 14 jours. Tes amis peuvent aussi saisir le code dans « Rejoindre avec un code ».</p>
+      </details>
+      <details>
+        <summary>Que voient mes amis ?</summary>
+        <p>Tes prises (espèce, photo, taille, date) dans le fil du groupe, et ta position selon ton niveau de partage. Ils peuvent réagir et commenter.</p>
+      </details>
+      <details>
+        <summary>Classements</summary>
+        <p>Plus gros spécimen, nombre de prises, nombre d'espèces, poids total, première prise de la saison. Seules les prises vérifiées comptent.</p>
+      </details>
+      <details>
+        <summary>Quitter ou supprimer un groupe</summary>
+        <p>Ouvre le groupe : « Quitter le groupe » en bas. Le créateur peut le supprimer pour tous. Tes prises restent dans ton carnet.</p>
+      </details>
+      <details>
+        <summary>Prévenir mes amis d'une prise</summary>
+        <p>Bientôt : une notification envoyée à tes groupes quand tu le choisis, sans jamais la position.</p>
+      </details>
+    </section>
+
+    <section id="communautes">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>Communautés de pêcheurs</h2>
+      <details>
+        <summary>Qu'est-ce qu'une communauté ?</summary>
+        <p>Un groupe plus large de pêcheurs (par façade ou par technique), souvent des inconnus. Tu choisis chaque prise que tu y publies, une par une, et <strong>aucune position n'y est jamais montrée</strong>.</p>
+      </details>
+      <details>
+        <summary>Rejoindre une communauté</summary>
+        <p>Groupes → « Découvrir les communautés ». Certaines s'ouvrent directement, d'autres demandent la validation d'un admin : tu verras le fil dès que ta demande est acceptée.</p>
+      </details>
+      <details>
+        <summary>Publier une prise</summary>
+        <p>Ouvre ta prise, puis « Publier dans une communauté ». Les prises sous la taille légale ne peuvent pas être publiées.</p>
+      </details>
+      <details>
+        <summary>Créer et animer une communauté</summary>
+        <p>La création est réservée au Premium (offert pendant la bêta). Tu deviens admin : tu acceptes les membres, tu peux retirer une publication, exclure quelqu'un et nommer d'autres admins.</p>
+      </details>
+      <details>
+        <summary>Signaler ou bloquer quelqu'un</summary>
+        <p>Touche les trois points à côté d'une publication : « Signaler » (les admins sont prévenus) ou « Bloquer » (vous ne voyez plus vos contenus respectifs). Nous examinons les signalements sous 24 heures, selon nos <a href="conditions.html">conditions d'utilisation</a>.</p>
+      </details>
+    </section>
+
+    <section id="premium">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>Premium et membres fondateurs</h2>
+      <details>
+        <summary>Que comprend le Premium ?</summary>
+        <p>L'historique complet de tes prises, la carte et les statistiques des spots, le calendrier personnel et les alertes de saison, les statistiques détaillées et le bilan de saison, l'export de ton carnet et la création de communautés.</p>
+      </details>
+      <details>
+        <summary>Combien ça coûte ?</summary>
+        <p><strong>Rien pendant la bêta</strong> : le Premium est offert à tous, sans paiement dans l'app. Les inscrits de la bêta deviennent <strong>membres fondateurs</strong> et garderont un avantage quand il deviendra payant.</p>
+      </details>
+      <details>
+        <summary>Soutenir le projet</summary>
+        <p>Odysse est construit par un pêcheur, sans publicité ni investisseur. Si l'app te plaît, tu peux <a href="https://ko-fi.com/odysse" target="_blank" rel="noopener">offrir un leurre sur Ko-fi</a> : ça paie l'IA et l'hébergement.</p>
+      </details>
+    </section>
+
+    <section id="donnees">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Données, confidentialité et compte</h2>
+      <details>
+        <summary>Où sont mes données ?</summary>
+        <p>Sur ton téléphone et, pour la sauvegarde, sur des serveurs en Europe. Aucune publicité, aucune donnée revendue. Détails dans la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+      </details>
+      <details>
+        <summary>Télécharger toutes mes données</summary>
+        <p>Mon compte → « Télécharger toutes mes données » : un fichier complet avec tes prises, tes spots et tes réglages (positions exactes comprises). Gratuit.</p>
+      </details>
+      <details id="supprimer-mon-compte">
+        <summary>Supprimer mon compte</summary>
+        <p>Dans l'app : <strong>Mon compte → Supprimer mon compte</strong>. Ton compte, tes prises, tes photos et les groupes que tu as créés sont effacés définitivement.</p>
+        <p>Sans l'app : écris depuis l'adresse de ton compte à <a href="mailto:privacy@odysse.app?subject=Suppression%20de%20mon%20compte%20Odysse">privacy@odysse.app</a> avec l'objet « Suppression de mon compte ». La suppression est faite sous 30 jours.</p>
+      </details>
+      <details>
+        <summary>Se déconnecter</summary>
+        <p>Mon compte → « Se déconnecter ». Par sécurité, c'est impossible tant que des prises attendent d'être sauvegardées : reconnecte-toi au réseau quelques instants avant.</p>
+      </details>
+    </section>
+
+    <section id="problemes">
+      <h2><span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6FB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>Problèmes fréquents</h2>
+      <details>
+        <summary>Une prise n'apparaît pas sur mon autre téléphone</summary>
+        <p>Elle attend sans doute la sauvegarde : ouvre l'app sur le premier téléphone avec du réseau quelques secondes, puis relance l'autre.</p>
+      </details>
+      <details>
+        <summary>La position de ma prise est vide</summary>
+        <p>Autorise la localisation pour Odysse dans les réglages du téléphone (« Lorsque l'app est active »). Tu peux aussi modifier la prise ensuite.</p>
+      </details>
+      <details>
+        <summary>L'appareil photo ne s'ouvre pas</summary>
+        <p>Vérifie l'autorisation Appareil photo pour Odysse dans les réglages du téléphone, puis relance l'app.</p>
+      </details>
+      <details>
+        <summary>Les conditions du jour ne s'affichent pas</summary>
+        <p>Elles demandent du réseau et la localisation. Sans position, Odysse utilise la façade choisie dans Mon compte.</p>
+      </details>
+    </section>
+
+    <p class="empty" id="empty">Aucune réponse ne correspond. Écris-nous à <a href="mailto:support@odysse.app">support@odysse.app</a>.</p>
+
+    <section class="contact">
+      <h2>Besoin d'aide ?</h2>
+      <p>Une question, un bug, une idée d'amélioration ? Écris à <a href="mailto:support@odysse.app">support@odysse.app</a> : on répond sous 48 heures. Pour un contenu abusif dans une communauté : <a href="mailto:support@odysse.app?subject=Signalement">support@odysse.app</a>, traité sous 24 heures.</p>
     </section>
   </main>
+
   <footer class="wrap">
     <a href="index.html">Accueil</a>
+    <a href="conditions.html">Conditions d'utilisation</a>
     <a href="confidentialite.html">Confidentialité</a>
     <a href="mentions-legales.html">Mentions légales</a>
   </footer>
+
+  <script>
+    // Recherche : n'affiche que les questions qui contiennent les mots tapés, et les ouvre.
+    const input = document.getElementById('q');
+    const items = [...document.querySelectorAll('main details')];
+    const sections = [...document.querySelectorAll('main section:not(.contact)')];
+    const normalize = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    input.addEventListener('input', () => {
+      const words = normalize(input.value).split(/\s+/).filter(Boolean);
+      let shown = 0;
+      items.forEach((d) => {
+        const ok = words.every((w) => normalize(d.textContent).includes(w));
+        d.style.display = ok ? '' : 'none';
+        d.open = words.length > 0 && ok;
+        if (ok) shown += 1;
+      });
+      sections.forEach((s) => {
+        s.style.display = [...s.querySelectorAll('details')].some((d) => d.style.display !== 'none') ? '' : 'none';
+      });
+      document.getElementById('empty').style.display = shown ? 'none' : 'block';
+      if (!words.length) items.forEach((d, i) => (d.open = i === 0));
+    });
+  </script>
 </body>
 </html>
