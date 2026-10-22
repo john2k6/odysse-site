@@ -140,3 +140,15 @@ footer.site .foot-links a { color: #fff; margin-right: 18px; white-space: nowrap
   .lure-float { padding: 12px; }
   .lure-float span { display: none; }
 }
+
+/* Menu du haut : boutons discrets, tout sur une ligne */
+.navwrap { gap: 20px; }
+.topnav .links { gap: 20px; }
+.topnav .links a { white-space: nowrap; font-size: 14px; }
+.topnav .btn { padding: 7px 14px; font-size: 14px; border-radius: 10px; }
+.topnav .nav-lure { background: transparent; color: #f0c674; border: 1px solid rgba(240, 198, 116, 0.45); }
+.topnav .nav-lure:hover { background: rgba(240, 198, 116, 0.12); }
+.topnav .nav-lure .lure-ico { width: 18px; height: 18px; }
+@media (max-width: 1180px) {
+  .topnav .nav-lure, .topnav .logo span { display: none; }
+}
